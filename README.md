@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sebastian Garnier | Portfolio<>
+  <title Sebastian Garnier | Portfoliotitle>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
