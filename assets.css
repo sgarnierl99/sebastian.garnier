@@ -1,3 +1,4 @@
+/* ===== Base ===== */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -20,49 +21,18 @@ nav a {
   font-size: 1.1em;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   text-decoration: underline;
 }
 
 main {
-  max-width: 800px;
+  max-width: 900px;            /* a bit wider for screenshots */
   margin: 2em auto;
   background: #fff;
   padding: 2em;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 12px #0001;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 1em;
-  object-fit: cover;
-  border: 3px solid #1a3a5d;
-}
-
-.about {
-  text-align: center;
-}
-
-.project-list {
-  list-style: none;
-  padding: 0;
-}
-
-.project-list li {
-  background: #f0f4fa;
-  margin-bottom: 1.3em;
-  padding: 1em;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px #0001;
-}
-
-.note {
-  font-size: 0.95em;
-  color: #a11;
-  margin-top: 2em;
 }
 
 footer {
@@ -71,4 +41,135 @@ footer {
   background: #eee;
   margin-top: 2em;
   color: #555;
+}
+
+/* ===== Reusable bits ===== */
+a {
+  color: #1a3a5d;
+}
+a:hover,
+a:focus {
+  color: #134064;
+}
+
+/* Profile (unchanged, keeping for other pages) */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  object-fit: cover;
+  border: 3px solid #1a3a5d;
+}
+.about { text-align: center; }
+
+/* ===== Lists & Cards ===== */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;               /* supports both School and Personal lists */
+  gap: 1.2em;
+}
+
+.project-list > li {
+  background: #f0f4fa;
+  padding: 1.05em 1.2em;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px #0001;
+}
+
+/* Smaller card heading rhythm */
+.project-list h3,
+.project-list h4 {
+  margin: 0 0 .5rem 0;
+}
+
+/* ===== Power BI project items ===== */
+.project-item {
+  background: #f8fbff;         /* slightly lighter than list background */
+  border: 1px solid #e6eef7;
+}
+
+.desc {
+  margin: .25rem 0 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Screenshot figure */
+.screenshot {
+  margin: 0 0 1rem 0;
+}
+.screenshot img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #e9eef5;
+  display: block;
+}
+.screenshot figcaption {
+  font-size: .9rem;
+  color: #667;
+  margin-top: .4rem;
+}
+
+/* Action row (buttons/links) */
+.assets {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: .2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: .55rem .95rem;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #1a3a5d;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 2px #0002;
+  transition: transform .04s ease, box-shadow .12s ease, background .12s ease;
+}
+.btn:hover,
+.btn:focus {
+  background: #17405f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px #0002;
+}
+
+/* Outline button (for .pbix download) */
+.btn.outline {
+  background: #fff;
+  color: #1a3a5d;
+  border: 1px solid #c9d8ea;
+}
+.btn.outline:hover,
+.btn.outline:focus {
+  background: #f5f9ff;
+  border-color: #9fb9dc;
+}
+
+/* ===== Notes / callouts ===== */
+.note {
+  font-size: 0.95em;
+  color: #a11;
+  margin-top: 2em;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 600px) {
+  main {
+    padding: 1.25em;
+  }
+  .assets {
+    gap: .5rem;
+  }
+  .btn { 
+    width: 100%;               /* easier to tap on mobile */
+    text-align: center;
+  }
 }
