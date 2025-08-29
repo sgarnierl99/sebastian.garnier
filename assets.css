@@ -20,14 +20,13 @@ nav a {
   margin: 0 1.2em;
   font-size: 1.1em;
 }
-
 nav a:hover,
 nav a:focus {
   text-decoration: underline;
 }
 
 main {
-  max-width: 900px;            /* a bit wider for screenshots */
+  max-width: 900px;              /* a bit wider for screenshots */
   margin: 2em auto;
   background: #fff;
   padding: 2em;
@@ -43,16 +42,12 @@ footer {
   color: #555;
 }
 
-/* ===== Reusable bits ===== */
-a {
-  color: #1a3a5d;
-}
+/* ===== Links ===== */
+a { color: #1a3a5d; }
 a:hover,
-a:focus {
-  color: #134064;
-}
+a:focus { color: #134064; }
 
-/* Profile (unchanged, keeping for other pages) */
+/* ===== Profile (kept for other pages) ===== */
 .profile-img {
   width: 120px;
   height: 120px;
@@ -68,7 +63,7 @@ a:focus {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;               /* supports both School and Personal lists */
+  display: grid;                 /* works for school & personal */
   gap: 1.2em;
 }
 
@@ -79,7 +74,7 @@ a:focus {
   box-shadow: 0 1px 3px #0001;
 }
 
-/* Smaller card heading rhythm */
+/* Headings rhythm inside cards */
 .project-list h3,
 .project-list h4 {
   margin: 0 0 .5rem 0;
@@ -87,7 +82,7 @@ a:focus {
 
 /* ===== Power BI project items ===== */
 .project-item {
-  background: #f8fbff;         /* slightly lighter than list background */
+  background: #f8fbff;           /* slightly lighter */
   border: 1px solid #e6eef7;
 }
 
@@ -98,23 +93,41 @@ a:focus {
 }
 
 /* Screenshot figure */
-.screenshot {
-  margin: 0 0 1rem 0;
-}
-.screenshot img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid #e9eef5;
-  display: block;
-}
+.screenshot { margin: 0 0 1rem 0; }
 .screenshot figcaption {
   font-size: .9rem;
   color: #667;
   margin-top: .4rem;
 }
 
-/* Action row (buttons/links) */
+/* Two-thumbnail gallery */
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .6rem;
+  margin-bottom: .4rem;
+}
+.thumbs a {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e9eef5;
+  box-shadow: 0 1px 2px #0001;
+  transition: transform .06s ease, box-shadow .12s ease;
+}
+.thumbs a:hover,
+.thumbs a:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px #0002;
+}
+.thumbs img {
+  width: 100%;
+  height: 180px;                  /* consistent tile height */
+  object-fit: cover;              /* neat crop */
+  display: block;
+}
+
+/* Actions row (buttons) */
 .assets {
   display: flex;
   gap: .6rem;
@@ -153,23 +166,20 @@ a:focus {
   border-color: #9fb9dc;
 }
 
-/* ===== Notes / callouts ===== */
+/* Notes / callouts (kept) */
 .note {
   font-size: 0.95em;
   color: #a11;
   margin-top: 2em;
 }
 
-/* ===== Responsive tweaks ===== */
-@media (max-width: 600px) {
-  main {
-    padding: 1.25em;
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  main { padding: 1.25em; }
+  .thumbs {
+    grid-template-columns: 1fr;  /* stack images on mobile */
   }
-  .assets {
-    gap: .5rem;
-  }
-  .btn { 
-    width: 100%;               /* easier to tap on mobile */
-    text-align: center;
-  }
+  .thumbs img { height: 220px; }
+  .assets { gap: .5rem; }
+  .btn { width: 100%; text-align: center; } /* easier to tap */
 }
