@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Resources | Sebastian Garnier</title>
-  <link rel="stylesheet" href="assets.css">
-  <link rel="stylesheet" href="images.css">
+  <link rel="stylesheet" href="assets.css" />
 </head>
 <body>
   <header>
@@ -12,25 +11,107 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
-      <a href="resources.html">Resources</a>
+      <a href="resources.html" aria-current="page">Resources</a>
     </nav>
   </header>
+
   <main>
-    <section>
-      <h2>Google Docs</h2>
-      <ul>
-        <li>
-          <a href="https://docs.google.com/document/d/your-doc-id" target="_blank">My CV (Google Doc)</a>
-        </li>
-        <!-- Add more docs as needed -->
-      </ul>
-      <h2>Google Slides</h2>
-      <iframe src="https://docs.google.com/presentation/d/e/your-slides-id/embed?start=false&loop=false" frameborder="0" width="700" height="400" allowfullscreen></iframe>
-      <h2>Power BI Reports</h2>
-      <iframe title="Power BI Report" width="700" height="400" src="https://app.powerbi.com/view?r=your-powerbi-id" frameborder="0" allowFullScreen="true"></iframe>
+    <!-- ===== Resume (top) ===== -->
+    <section class="resume-card">
+      <div class="resume-left">
+        <h2>Resume</h2>
+        <p class="muted">View or download my most recent resume (PDF).</p>
+        <div class="resume-actions">
+          <a class="btn" href="assets/Resume.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn outline" href="assets/Resume.pdf" download>Download</a>
+        </div>
+      </div>
+      <div class="resume-right">
+        <!-- Optional inline preview; remove if you prefer only buttons -->
+        <iframe
+          title="Resume PDF preview"
+          src="assets/Resume.pdf#view=FitH"
+          loading="lazy"
+        ></iframe>
+      </div>
     </section>
-    <p class="note">Replace the above links and embed URLs with your actual files!</p>
+
+    <!-- ===== Snapshot ===== -->
+    <section>
+      <h2>About / Snapshot</h2>
+      <ul class="card-list">
+        <li class="card">
+          <h3>Who I am</h3>
+          <p>
+            I’m a finance-focused analyst with a background in Economics & Environmental Studies.
+            I care about combining strong, data-driven decision making with sustainability and real business impact.
+          </p>
+        </li>
+        <li class="card">
+          <h3>What I do</h3>
+          <p>
+            Data and financial analysis (Power BI, Excel/Sheets, Power Query, DAX) and portfolio/corporate finance fundamentals.
+            I enjoy building clear dashboards and executive-ready insights.
+          </p>
+        </li>
+        <li class="card">
+          <h3>Where I’m headed</h3>
+          <p>
+            Growing in finance/analytics roles with exposure to sustainability and operations — crafting analysis that informs strategy.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Trajectory (timeline) ===== -->
+    <section>
+      <h2>Trajectory</h2>
+      <ol class="timeline">
+        <li>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <h4>Fisgard Asset Management — Analyst (2023–Present)</h4>
+            <p>
+              Exempt Market Dealer certification; data and financial analysis with client-facing advisory and operational responsibilities.
+              Built reporting and ad-hoc analysis to support decisions.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <h4>TD — Client Services (while studying)</h4>
+            <p>
+              First exposure to retail banking and financial products; strengthened attention to detail and client experience.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <h4>University of Victoria — Economics & Environmental Studies</h4>
+            <p>
+              Finance specialization with projects in valuation, corporate finance, and applied quantitative analysis; interest in ESG/sustainable finance.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Skills & Certifications ===== -->
+    <section>
+      <h2>Skills & Certifications</h2>
+      <ul class="pill-list">
+        <li>Power BI (DAX, Power Query)</li>
+        <li>Excel / Google Sheets</li>
+        <li>Financial Modeling & Valuation</li>
+        <li>Data Cleaning & ETL</li>
+        <li>Dashboarding & Storytelling</li>
+      </ul>
+      <p class="muted">Certification: CFA Level I candidate.</p>
+    </section>
   </main>
+
   <footer>
     &copy; 2025 Sebastian Garnier
   </footer>
