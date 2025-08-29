@@ -26,7 +26,7 @@ nav a:focus {
 }
 
 main {
-  max-width: 900px;              /* a bit wider for screenshots */
+  max-width: 900px;              /* a bit wider so screenshots breathe */
   margin: 2em auto;
   background: #fff;
   padding: 2em;
@@ -47,7 +47,7 @@ a { color: #1a3a5d; }
 a:hover,
 a:focus { color: #134064; }
 
-/* ===== Profile (kept for other pages) ===== */
+/* ===== Profile / About ===== */
 .profile-img {
   width: 120px;
   height: 120px;
@@ -56,14 +56,54 @@ a:focus { color: #134064; }
   object-fit: cover;
   border: 3px solid #1a3a5d;
 }
-.about { text-align: center; }
 
-/* ===== Lists & Cards ===== */
+/* layout for photo left + contact stacked */
+.profile-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.contact-info a {
+  color: #1a3a5d;
+  text-decoration: none;
+}
+.contact-info a:hover,
+.contact-info a:focus {
+  text-decoration: underline;
+}
+
+/* LinkedIn link with icon and your name as label */
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* About text spacing + separators */
+.about { text-align: left; }
+.about p { margin-bottom: 1rem; }
+.about hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 1.5rem 0;
+}
+
+/* ===== Lists & Cards (School + Personal projects) ===== */
 .project-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;                 /* works for school & personal */
+  display: grid;
   gap: 1.2em;
 }
 
@@ -82,7 +122,7 @@ a:focus { color: #134064; }
 
 /* ===== Power BI project items ===== */
 .project-item {
-  background: #f8fbff;           /* slightly lighter */
+  background: #f8fbff;           /* slightly lighter than base project card */
   border: 1px solid #e6eef7;
 }
 
@@ -127,7 +167,7 @@ a:focus { color: #134064; }
   display: block;
 }
 
-/* Actions row (buttons) */
+/* Action row (buttons/links) */
 .assets {
   display: flex;
   gap: .6rem;
@@ -154,7 +194,7 @@ a:focus { color: #134064; }
   box-shadow: 0 4px 10px #0002;
 }
 
-/* Outline button (for .pbix download) */
+/* Outline button (e.g., .pbix download) */
 .btn.outline {
   background: #fff;
   color: #1a3a5d;
@@ -176,10 +216,19 @@ a:focus { color: #134064; }
 /* ===== Responsive ===== */
 @media (max-width: 700px) {
   main { padding: 1.25em; }
-  .thumbs {
-    grid-template-columns: 1fr;  /* stack images on mobile */
+
+  /* stack profile layout on small screens */
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+  .contact-info { text-align: left; } /* keep details left-aligned for readability */
+
+  .thumbs { grid-template-columns: 1fr; }
   .thumbs img { height: 220px; }
+
   .assets { gap: .5rem; }
   .btn { width: 100%; text-align: center; } /* easier to tap */
 }
+
