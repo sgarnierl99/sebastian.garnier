@@ -11,47 +11,112 @@
     <h1>Projects</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" aria-current="page">Projects</a>
       <a href="resources.html">Resources</a>
     </nav>
   </header>
+
   <main>
     <section>
       <h2>School Projects</h2>
       <ul class="project-list">
         <li>
           <h3>Company Fundamental Analysis (V)</h3>
-          <p>I conducted a fundamental analysis of Visa Inc. using both top-down and bottom-up approaches. 
-            I began with an industry assessment and competitor comparison to evaluate Visa’s positioning within the payments sector, then applied valuation models including CAPM, the intrinsic value formula 𝑉(0), and relative measures such as EPS and the P/E ratio derived from financial statements. 
-            Finally, I compared my calculated intrinsic value to Visa’s actual market price, providing insight into whether the stock appeared overvalued or undervalued, while highlighting the practical connection between theoretical models and real-world market behavior.</p>
-          <a href="https://docs.google.com/presentation/d/1Ggjn1BS-hcMhqibIMa5wpljtYfh3YOW3hJEN7Ue1hsU/edit?usp=sharing" target="_blank">
-    View Google Slides
-  </a>
+          <p>
+            I conducted a fundamental analysis of Visa Inc. using both top-down and bottom-up approaches.
+            I began with an industry assessment and competitor comparison to evaluate Visa’s positioning within the payments sector, then applied valuation models including CAPM, the intrinsic value formula 𝑉(0), and relative measures such as EPS and the P/E ratio derived from financial statements.
+            Finally, I compared my calculated intrinsic value to Visa’s actual market price, providing insight into whether the stock appeared overvalued or undervalued, while highlighting the practical connection between theoretical models and real-world market behavior.
+          </p>
+          <a href="https://docs.google.com/presentation/d/1Ggjn1BS-hcMhqibIMa5wpljtYfh3YOW3hJEN7Ue1hsU/edit?usp=sharing" target="_blank" rel="noopener">View Google Slides</a>
         </li>
+
         <li>
           <h3>Portfolio Analysis Assignment</h3>
-          <p>As part of a portfolio management group project, I analyzed Ford (F) and Tesla (TSLA) alongside other securities to apply key concepts in corporate finance and investment theory.
-            The project involved collecting and processing financial data, calculating risk and return metrics, applying models such as CAPM and portfolio optimization, and evaluating asset performance relative to the market and risk-free securities. 
-            This assignment provided practical experience in applying theoretical frameworks to real financial data, strengthening both analytical and quantitative skills relevant to investment analysis and portfolio construction.</p>
-          <a href="https://docs.google.com/spreadsheets/d/1mWDETNRRMmnYIOxOD9qBw56FESH9eJ_S/edit?usp=sharing&ouid=107274952310472022910&rtpof=true&sd=true" target="_blank">
-              View Google Sheets
-            </a><br>
-          <a href="https://docs.google.com/document/d/1UI7uq6Ey0GAEdb9g_JzMQ9U8jYurAgiIrKZ3AliIyRE/edit?usp=sharing" target="_blank">
-             View Google Docs
-          </a>
+          <p>
+            As part of a portfolio management group project, I analyzed Ford (F) and Tesla (TSLA) alongside other securities to apply key concepts in corporate finance and investment theory.
+            The project involved collecting and processing financial data, calculating risk and return metrics, applying models such as CAPM and portfolio optimization, and evaluating asset performance relative to the market and risk-free securities.
+            This assignment provided practical experience in applying theoretical frameworks to real financial data, strengthening both analytical and quantitative skills relevant to investment analysis and portfolio construction.
+          </p>
+          <a href="https://docs.google.com/spreadsheets/d/1mWDETNRRMmnYIOxOD9qBw56FESH9eJ_S/edit?usp=sharing&ouid=107274952310472022910&rtpof=true&sd=true" target="_blank" rel="noopener">View Google Sheets</a><br>
+          <a href="https://docs.google.com/document/d/1UI7uq6Ey0GAEdb9g_JzMQ9U8jYurAgiIrKZ3AliIyRE/edit?usp=sharing" target="_blank" rel="noopener">View Google Docs</a>
         </li>
       </ul>
+    </section>
+
+    <section>
       <h2>Personal Projects</h2>
+
+      <!-- Power BI Projects block -->
+      <h3>Power BI Projects</h3>
       <ul class="project-list">
-        <li>
-          <h3>Personal Project 1</h3>
-          <p>Short description. You can add links and screenshots too.</p>
+        <!-- Project 1 -->
+        <li class="project-item">
+          <h4>Project 1: Global CRM</h4>
+          <p class="desc">
+            Unified CRM model combining leads, opportunities, and accounts across regions.
+            Power Query cleans and merges entities; DAX measures track pipeline velocity, win rate, and cohort retention.
+          </p>
+          <figure class="screenshot">
+            <img src="assets/p1.png" alt="Global CRM dashboard overview">
+            <figcaption>Screenshot — Global CRM Overview</figcaption>
+          </figure>
+          <div class="assets">
+            <a class="btn outline" href="assets/Global-CRM.pbix" download>Download .pbix</a>
+          </div>
+        </li>
+
+        <!-- Project 2 -->
+        <li class="project-item">
+          <h4>Project 2: Retail Sales Performance</h4>
+          <p class="desc">
+            End-to-end sales report with YoY growth, category mix, and store drill-downs.
+            Rolling 12-month trends and variance vs. budget using DAX.
+          </p>
+          <figure class="screenshot">
+            <img src="assets/p2.png" alt="Retail Sales dashboard">
+            <figcaption>Screenshot — Retail KPI Overview</figcaption>
+          </figure>
+          <div class="assets">
+            <a class="btn outline" href="assets/Retail-Sales.pbix" download>Download .pbix</a>
+          </div>
+        </li>
+
+        <!-- Project 3 -->
+        <li class="project-item">
+          <h4>Project 3: Customer Churn & Retention</h4>
+          <p class="desc">
+            Churn analysis by tenure, plan, and usage cohorts. DAX computes churn rate and retention; slicers enable cohort exploration.
+          </p>
+          <figure class="screenshot">
+            <img src="assets/p3.png" alt="Churn and retention dashboard">
+            <figcaption>Screenshot — Churn & Cohorts</figcaption>
+          </figure>
+          <div class="assets">
+            <a class="btn outline" href="assets/Churn-Analysis.pbix" download>Download .pbix</a>
+          </div>
+        </li>
+
+        <!-- Project 4 -->
+        <li class="project-item">
+          <h4>Project 4: Executive Finance KPIs</h4>
+          <p class="desc">
+            P&L snapshot with revenue, COGS, OpEx, and gross margin. R12 trends and variance vs. plan with bookmarked board views.
+          </p>
+          <figure class="screenshot">
+            <img src="assets/p4.png" alt="Executive finance KPI dashboard">
+            <figcaption>Screenshot — Finance KPIs</figcaption>
+          </figure>
+          <div class="assets">
+            <a class="btn outline" href="assets/Finance-KPIs.pbix" download>Download .pbix</a>
+          </div>
         </li>
       </ul>
     </section>
   </main>
+
   <footer>
     &copy; 2025 Sebastian Garnier
   </footer>
 </body>
 </html>
+
